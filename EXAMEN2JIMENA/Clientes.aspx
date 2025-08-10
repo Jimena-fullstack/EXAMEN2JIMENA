@@ -11,27 +11,24 @@
         <h2>Clientes</h2>
 
         <asp:GridView ID="gvClientes" runat="server" AutoGenerateColumns="False"
-              DataKeyNames="Id"
-              OnSelectedIndexChanged="gvClientes_SelectedIndexChanged"
-              OnRowDeleting="gvClientes_RowDeleting"
-              DataSourceID="SqlDataSource1">
-            <Columns>
-                <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
-                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                <asp:BoundField DataField="PrimerApellido" HeaderText="Primer Apellido" SortExpression="PrimerApellido" />
-                <asp:BoundField DataField="SegundoApellido" HeaderText="Segundo Apellido" SortExpression="SegundoApellido" />
-                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
-                <asp:CommandField ShowSelectButton="True" SelectText="Editar" />
-                <asp:CommandField ShowDeleteButton="True" DeleteText="Eliminar" />
-            </Columns>
-        </asp:GridView>
+      OnSelectedIndexChanged="gvClientes_SelectedIndexChanged"
+      OnRowDeleting="gvClientes_RowDeleting">
+    <Columns>
+        
+        <asp:CommandField ShowSelectButton="True" ShowEditButton="True" ShowDeleteButton="True" />
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server"
-            ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
-            ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>"
-            SelectCommand="SELECT * FROM [clientes]">
-        </asp:SqlDataSource>
+        <asp:BoundField DataField="ClienteId" HeaderText="ClienteId" InsertVisible="False" ReadOnly="True" SortExpression="ClienteId" />
+        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+        <asp:BoundField DataField="Apellido1" HeaderText="Apellido1" SortExpression="Apellido1" />
+        <asp:BoundField DataField="Apellido2" HeaderText="Apellido2" SortExpression="Apellido2" />
+        <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+        <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
+    </Columns>
+</asp:GridView>
+
+
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ClientesConnectionString %>" SelectCommand="SELECT * FROM [Datoscliente]"></asp:SqlDataSource>
+
 
         <hr />
 
