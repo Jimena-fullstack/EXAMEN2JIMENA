@@ -32,6 +32,15 @@ Partial Public Class Clientes
     Protected WithEvents gvClientes As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
+    '''Control SqlDataSourceClientes.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceClientes As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
     '''Control SqlDataSource2.
     '''</summary>
     '''<remarks>

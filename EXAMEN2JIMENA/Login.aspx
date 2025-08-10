@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Login.aspx.vb" Inherits="EXAMEN2JIMENA.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
     <!DOCTYPE html>
 <html>
 <head runat="server">
@@ -19,4 +20,6 @@
 </body>
 </html>
 </asp:Content>
+
+
 
